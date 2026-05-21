@@ -4,10 +4,19 @@ username = input("Input username or email")
 password = input("Input password")
 
 if username in usernames_passwords:
-    if password == usernames_passwords[username]:
-        print("Login successful")
+    attempts = 0
+    
+    while attempts < 3
+    password = input(f"Input password({3 - attempts} attempts remaining): ")
+        if password == usernames_passwords[username]:
+            print("Login successful")
+            break
+        else:
+            attempts = attempts + 1
+            print("Incorrect password")
+            
+        if attempts == 3:
+            print("Max retries reached")
     else:
-        print("Incorrect password")
-else:
-    print("username invalid")
-
+        print("username invalid")
+   
